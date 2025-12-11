@@ -1,7 +1,9 @@
 import { Canvas } from "@react-three/fiber";
 import clsx from "clsx";
 import useMacbookStore from "../store";
-import { Box, OrbitControls } from "@react-three/drei";
+import ModMacbookModel14 from "./models/Macbook-14";
+import StudioLights from "./StudioLights";
+import { OrbitControls } from "@react-three/drei";
 
 const ProductViewer = () => {
   const { color, setColor, scale, setScale } = useMacbookStore();
@@ -11,7 +13,9 @@ const ProductViewer = () => {
       <h2>Take a closer look.</h2>
 
       <div className="controls">
-        {/*<p className="info">Macbook Pro | Available in 14" & 16" in Space Gray & Dark colors</p>*/}
+        <p className="info">
+          Macbook Pro | Available in 14" & 16" in Space Gray & Dark colors
+        </p>
 
         <div className="flex-center gap-5 mt-5">
           <div className="color-control">
@@ -60,15 +64,11 @@ const ProductViewer = () => {
         id="canvas"
         camera={{ position: [0, 2, 5], fov: 50, near: 0.1, far: 100 }}
       >
-        <Box position={[0, 0, 0]} scale={10 * scale} material-color={color}>
-          <OrbitControls enableZoom={false} />
-        </Box>
-        {/* <StudioLights /> */}
-        {/* 
-        <ModelSwitcher
-          scale={isMobile ? scale - 0.03 : scale}
-          isMobile={isMobile}
-        /> */}
+        <ambientLight intensity={1} />
+        <ModMacbookModel14 scale={0.06} position={[0, 0, 0]} />
+
+        <StudioLights />
+        <OrbitControls enablePan={false} makeDefault />
       </Canvas>
     </section>
   );
