@@ -1,7 +1,7 @@
 # A high-performance, visually stunning landing page built with React, GSAP, and Three.js.
 
 <div align="center">
-  ![Gif](./public/readme.gif)
+  <img src="./public/readme.gif" alt="Demo Gif" />
 </div>
 
 ---
