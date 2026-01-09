@@ -1,7 +1,7 @@
 # Apple MacBook Pro Landing Page 💻✨
 
 <div align="center">
-  <video src="public/videos/readme.mov" width="800" controls autoplay loop muted></video>
+  <video src="public/videos/readme.mp4" width="800" controls autoplay loop muted></video>
   <p align="center">
     <strong>A high-performance, visually stunning landing page built with React, GSAP, and Three.js.</strong>
   </p>
