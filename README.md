@@ -1,17 +1,10 @@
 # Apple MacBook Pro Landing Page 💻✨
 
 <div align="center">
-  <img src="docs/images/hero.png" alt="MacBook Pro Hero" width="800">
+  <video src="public/videos/readme.mov" width="800" controls autoplay loop muted></video>
   <p align="center">
     <strong>A high-performance, visually stunning landing page built with React, GSAP, and Three.js.</strong>
   </p>
-
-[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
-[![Vite](https://img.shields.io/badge/vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white)](https://greensock.com/gsap/)
-[![Three.js](https://img.shields.io/badge/Three.js-black?style=for-the-badge&logo=three.js&logoColor=white)](https://threejs.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-
 </div>
 
 ---
@@ -33,25 +26,6 @@ Using this project, I explored:
 - 🧊 **3D Product Viewer**: Interactive 3D MacBook model using Three.js and React Three Fiber.
 - ⚡ **Cutting-edge Tech**: Built with React 19 and Vite for lightning-fast environment and optimized builds.
 - 🎨 **Premium UI**: Modern dark-mode aesthetic with sleek typography and high-quality assets.
-
----
-
-## 📸 Demo Highlights
-
-<div align="center">
-  <table>
-    <tr>
-      <td width="50%">
-        <img src="docs/images/performance.png" alt="Performance Section">
-        <p align="center">🚀 <strong>Extreme Performance</strong><br>Visualizing the power of the M-series chips.</p>
-      </td>
-      <td width="50%">
-        <img src="docs/images/viewer.png" alt="3D Viewer">
-        <p align="center">🧊 <strong>3D Interactivity</strong><br>Explore the MacBook from every angle.</p>
-      </td>
-    </tr>
-  </table>
-</div>
 
 ---
 

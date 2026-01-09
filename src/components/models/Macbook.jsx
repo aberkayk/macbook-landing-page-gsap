@@ -14,13 +14,20 @@ import useMacbookStore from "../../store/index.js";
 import { noChangeParts } from "../../constants/index.js";
 import { Color } from "three";
 
+const Screen = ({ nodes, texture }) => {
+  const screen = useVideoTexture(texture);
+  return (
+    <mesh geometry={nodes.Object_123.geometry} rotation={[Math.PI / 2, 0, 0]}>
+      <meshBasicMaterial map={screen} />
+    </mesh>
+  );
+};
+
 export default function MacbookModel(props) {
   const { color, texture } = useMacbookStore();
   const { nodes, materials, scene } = useGLTF(
     "/models/macbook-transformed.glb"
   );
-
-  const screen = useVideoTexture(texture);
 
   useEffect(() => {
     scene.traverse((child) => {
@@ -119,9 +126,11 @@ export default function MacbookModel(props) {
         material={materials.JvMFZolVCdpPqjj}
         rotation={[Math.PI / 2, 0, 0]}
       />
-      <mesh geometry={nodes.Object_123.geometry} rotation={[Math.PI / 2, 0, 0]}>
-        <meshBasicMaterial map={screen} />
-      </mesh>
+
+      <React.Suspense fallback={null}>
+        <Screen nodes={nodes} texture={texture} />
+      </React.Suspense>
+
       <mesh
         geometry={nodes.Object_127.geometry}
         material={materials.ZCDwChwkbBfITSW}
