@@ -1,6 +1,6 @@
+import { useMediaQuery } from "react-responsive";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { useMediaQuery } from "react-responsive";
 
 const Showcase = () => {
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
@@ -23,12 +23,12 @@ const Showcase = () => {
         })
         .to(".content", { opacity: 1, y: 0, ease: "power1.in" });
     }
-  });
+  }, [isTablet]);
 
   return (
     <section id="showcase">
       <div className="media">
-        <video src="/videos/game.mp4" loop muted playsInline />
+        <video src="/videos/game.mp4" loop muted autoPlay playsInline />
         <div className="mask">
           <img src="/mask-logo.svg" />
         </div>
@@ -81,5 +81,4 @@ const Showcase = () => {
     </section>
   );
 };
-
 export default Showcase;
